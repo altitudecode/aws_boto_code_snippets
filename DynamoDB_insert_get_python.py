@@ -2,9 +2,7 @@ import boto3
 dynamo = boto3.client('dynamodb')
 
 #####
-# Challenge 1: Put the entry for Danish into the LanguagesTable
-#   "Language": "Danish"
-#   "Code": "da"
+# Put the entry for Danish into the LanguagesTable
 #####
 dynamo.put_item(
     TableName="LanguagesTable",
@@ -13,7 +11,7 @@ dynamo.put_item(
           })
 
 #####
-# Challenge 2: Retrieve the entry for Danish
+# Retrieve the entry for Danish
 #####
 response = dynamo.get_item(
     TableName="LanguagesTable",
